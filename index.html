@@ -67,7 +67,7 @@
     <div class="md:w-1/2 z-10" data-aos="fade-right">
       <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white border border-slate-200 text-vibe-indigo text-xs font-black uppercase tracking-wider mb-6 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-        Доставяме в Ямбол & Региона
+        Доставяме в Варна & Региона
       </div>
       
       <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] mb-6">
@@ -180,6 +180,103 @@
     </div>
   </section>
 
+  <div class="bg-white border-y border-slate-100 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-xs font-black uppercase tracking-widest text-slate-400 mb-6">Доверен партньор на над 50 обекта в региона</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+        <div class="text-xl font-black text-slate-800">ХОТЕЛ ТУНДЖА</div>
+        <div class="text-xl font-black text-slate-800">РЕСТОРАНТ ИЗГРЕВ</div>
+        <div class="text-xl font-black text-slate-800">КАЗИНО ПАЛАС</div>
+        <div class="text-xl font-black text-slate-800">ОФИС ЦЕНТЪР ВАРНА</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-24 bg-vibe-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-black text-slate-900 mb-4">Смяната на доставчик е лесна.</h2>
+        <p class="text-slate-500 text-lg font-medium">Без стрес. Без прекъсване на работния процес. Ние поемаме логистиката.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 relative">
+        <div class="hidden md:block absolute top-12 left-20 right-20 h-1 bg-slate-200 z-0"></div>
+
+        <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-24 h-24 mx-auto bg-white border-4 border-vibe-indigo rounded-full flex items-center justify-center text-3xl font-black text-vibe-indigo mb-6 shadow-indigo">1</div>
+          <h3 class="text-2xl font-black text-slate-900 mb-3">Заявете Оферта</h3>
+          <p class="text-slate-600 font-medium">Изпратете ни списък с текущите ви нужди. Ще ви върнем B2B цени до 2 часа.</p>
+        </div>
+
+        <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-24 h-24 mx-auto bg-white border-4 border-vibe-indigo rounded-full flex items-center justify-center text-3xl font-black text-vibe-indigo mb-6 shadow-indigo">2</div>
+          <h3 class="text-2xl font-black text-slate-900 mb-3">Одобрявате</h3>
+          <p class="text-slate-600 font-medium">Заключваме цените ви. Създаваме ви личен профил и график за зареждане.</p>
+        </div>
+
+        <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-24 h-24 mx-auto bg-vibe-yellow border-4 border-white rounded-full flex items-center justify-center text-3xl font-black text-slate-900 mb-6 shadow-neon">3</div>
+          <h3 class="text-2xl font-black text-slate-900 mb-3">Ние Доставяме</h3>
+          <p class="text-slate-600 font-medium">Получавате стоката директно в обекта си с изрядна фактура с ДДС. Край на грижите.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-black text-slate-900 mb-4">Бизнесът в Варна ни се доверява.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-vibe-light p-8 rounded-3xl border border-slate-100 relative" data-aos="fade-up">
+          <div class="text-vibe-yellow text-2xl mb-4">★★★★★</div>
+          <p class="text-slate-600 font-medium mb-6 italic">"Преди губех по 2 часа седмично да поръчвам тоалетна хартия и препарати от различни места. С Цветкови всичко идва на уречения ден. Перфектни."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <div class="w-12 h-12 bg-vibe-indigo text-white rounded-full flex items-center justify-center font-black">ИВ</div>
+            <div>
+              <div class="font-black text-slate-900">Иван Василев</div>
+              <div class="text-sm text-slate-500 font-bold">Управител Ресторант</div>
+            </div>
+          </div>
+        </div>
+        
+        </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-900 text-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-black mb-4">Въпроси & Отговори</h2>
+        <p class="text-slate-400 font-medium">Всичко, което трябва да знаете преди да започнем.</p>
+      </div>
+
+      <div class="space-y-4">
+        <div x-data="{ expanded: false }" class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden">
+          <button @click="expanded = ! expanded" class="w-full px-6 py-5 text-left font-black text-lg flex justify-between items-center hover:bg-slate-700/50 transition">
+            <span>Имате ли минимална сума за доставка?</span>
+            <span x-text="expanded ? '−' : '+'" class="text-vibe-yellow text-2xl"></span>
+          </button>
+          <div x-show="expanded" x-collapse class="px-6 pb-5 text-slate-400 font-medium">
+            Не. Разбираме, че понякога имате нужда от спешно зареждане на дребни консумативи. Обслужваме ви без изискване за минимален праг на поръчката.
+          </div>
+        </div>
+
+        <div x-data="{ expanded: false }" class="bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden">
+          <button @click="expanded = ! expanded" class="w-full px-6 py-5 text-left font-black text-lg flex justify-between items-center hover:bg-slate-700/50 transition">
+            <span>Издавате ли данъчни фактури?</span>
+            <span x-text="expanded ? '−' : '+'" class="text-vibe-yellow text-2xl"></span>
+          </button>
+          <div x-show="expanded" x-collapse class="px-6 pb-5 text-slate-400 font-medium">
+            Абсолютно. Издаваме изрядни фактури с ДДС за всяка доставка, което ги прави идеални за вашето счетоводство.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="py-24 bg-vibe-light">
    <div class="max-w-5xl mx-auto px-4" data-aos="zoom-in">
       <div class="grid lg:grid-cols-5 gap-8 bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-200">
@@ -189,20 +286,20 @@
           <p class="text-slate-500 font-medium mb-8">Предпочитате чат? Отговаряме светкавично във всички платформи. Личен търговски агент е на линия.</p>
           
           <div class="space-y-4 mb-8">
-            <a href="https://wa.me/359888123456" target="_blank" class="flex items-center gap-4 bg-[#25D366]/10 text-[#25D366] p-4 rounded-xl font-black hover:bg-[#25D366] hover:text-white transition-all group">
+            <a href="https://wa.me/359878765658" target="_blank" class="flex items-center gap-4 bg-[#25D366]/10 text-[#25D366] p-4 rounded-xl font-black hover:bg-[#25D366] hover:text-white transition-all group">
               <span class="text-2xl group-hover:scale-110 transition-transform">💬</span>
               WhatsApp Чат
             </a>
-            <a href="viber://chat?number=%2B359888123456" target="_blank" class="flex items-center gap-4 bg-[#7360F2]/10 text-[#7360F2] p-4 rounded-xl font-black hover:bg-[#7360F2] hover:text-white transition-all group">
+            <a href="viber://chat?number=%2B359878765658" target="_blank" class="flex items-center gap-4 bg-[#7360F2]/10 text-[#7360F2] p-4 rounded-xl font-black hover:bg-[#7360F2] hover:text-white transition-all group">
               <span class="text-2xl group-hover:scale-110 transition-transform">💜</span>
               Viber Чат
             </a>
             <div class="flex flex-col gap-2 pt-4">
-              <a href="tel:+359888123456" class="flex items-center gap-3 text-slate-700 font-black hover:text-vibe-indigo transition-colors">
-                <span>📞</span> +359 888 123 456
+              <a href="tel:+359878765658" class="flex items-center gap-3 text-slate-700 font-black hover:text-vibe-indigo transition-colors">
+                <span>📞</span> +359 878 765 658
               </a>
-              <a href="mailto:b2b@tsetkovi.bg" class="flex items-center gap-3 text-slate-700 font-black hover:text-vibe-indigo transition-colors">
-                <span>📧</span> b2b@tsetkovi.bg
+              <a href="mailto:tsvetkovitrading@gmail.com" class="flex items-center gap-3 text-slate-700 font-black hover:text-vibe-indigo transition-colors">
+                <span>📧</span> tsvetkovitrading@gmail.com
               </a>
             </div>
           </div>
@@ -283,7 +380,7 @@
             <div class="font-black text-white text-xl tracking-tight">Цветкови</div>
           </a>
           <p class="text-sm font-medium leading-relaxed">
-            Професионален B2B дистрибутор на хигиенни материали, препарати и консумативи за бизнеса в Ямбол и региона.
+            Професионален B2B дистрибутор на хигиенни материали, препарати и консумативи за бизнеса в Варна и региона.
           </p>
         </div>
 
@@ -302,7 +399,7 @@
           <ul class="space-y-3 text-sm font-medium">
             <li class="flex items-center gap-2">📞 +359 888 123 456</li>
             <li class="flex items-center gap-2">📧 b2b@tsetkovi.bg</li>
-            <li class="flex items-center gap-2">📍 гр. Ямбол, Индустриална Зона</li>
+            <li class="flex items-center gap-2">📍 гр. Варна, Индустриална Зона</li>
           </ul>
         </div>
 
