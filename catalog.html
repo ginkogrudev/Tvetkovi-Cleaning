@@ -11,11 +11,10 @@
       theme: {
         extend: {
           colors: {
-            brand: {
-              blue: '#1E3A8A',    /* 30% Corporate Blue */
-              light: '#F8FAFC',   /* 60% White/Off-white */
-              yellow: '#FACC15',  /* 10% CTA Yellow */
-              agency: '#EC4899'
+            b2b: {
+              white: '#FFFFFF', light: '#F5F8F6', border: '#D0DCD5',
+              teal: '#123A31', tealdark: '#0A261F', tealmid: '#1C594A',
+              green: '#71A141', greendark: '#557A31', ggpink: '#EC4899'
             }
           }
         }
@@ -23,41 +22,43 @@
     }
   </script>
 
-  <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="style.css">
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-brand-light text-slate-800 font-sans antialiased">
+<body class="bg-b2b-light text-b2b-teal font-sans antialiased selection:bg-b2b-green selection:text-white">
 
-  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+  <nav class="bg-white border-b border-b2b-border sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <div class="bg-brand-blue text-white p-2 rounded-lg font-bold">ЦК</div>
-        <div class="font-bold text-brand-blue text-lg leading-tight">Цветкови<br><span class="text-xs text-brand-yellow uppercase tracking-widest">Каталог</span></div>
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="bg-b2b-green text-white w-10 h-10 flex items-center justify-center font-black text-xl">ЦК</div>
+        <div class="leading-none">
+          <div class="font-black text-b2b-teal text-xl tracking-tight">Цветкови</div>
+          <div class="text-[10px] text-b2b-tealmid font-black uppercase tracking-widest mt-1">Каталог</div>
+        </div>
       </a>
-      <a href="index.html#contact" class="bg-brand-yellow text-slate-900 px-5 py-2 rounded-md font-bold hover:bg-yellow-400 transition shadow-md">
-        Обратно към Офертите →
+      <a href="index.html#contact" class="hidden sm:inline-block border-2 border-b2b-teal text-b2b-teal px-5 py-2 font-black hover:bg-b2b-teal hover:text-white transition-colors uppercase tracking-widest text-xs">
+        Към Офертите
       </a>
     </div>
   </nav>
 
-  <main class="max-w-7xl mx-auto px-4 py-12" x-data="catalogLogic()">
+  <main class="max-w-7xl mx-auto px-4 py-16" x-data="catalogLogic()">
     
-    <div class="mb-10 text-center">
-      <h1 class="text-4xl font-extrabold text-brand-blue mb-4">Индустриален Асортимент</h1>
-      <p class="text-slate-500 max-w-2xl mx-auto text-lg">
-        Разгледайте нашите наличности. Цените варират според обема. Заявете артикулите, които ви интересуват, и ще получите персонализирана B2B цена до 2 часа.
+    <div class="mb-12 text-center border-b border-b2b-border pb-12">
+      <h1 class="text-4xl md:text-5xl font-black text-b2b-teal mb-4 uppercase">Индустриален Асортимент</h1>
+      <p class="text-b2b-tealmid max-w-2xl mx-auto text-lg font-medium">
+        Разгледайте нашите наличности. Заявете артикулите, които ви интересуват, и ще получите B2B цена на едро.
       </p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 flex flex-col md:flex-row gap-4">
+    <div class="bg-white p-4 border border-b2b-border mb-10 flex flex-col md:flex-row gap-4">
       <input 
         x-model="searchQuery" 
         type="text" 
-        placeholder="🔍 Търси препарат, хартия, дозатор..." 
-        class="flex-1 px-4 py-3 rounded-md border border-slate-300 focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20 outline-none text-lg"
+        placeholder="Търси препарат, хартия, консуматив..." 
+        class="flex-1 px-4 py-3 bg-b2b-light border border-b2b-border focus:border-b2b-teal outline-none text-b2b-teal font-bold placeholder:font-normal placeholder:text-slate-400"
       >
-      <select x-model="selectedCategory" class="px-4 py-3 rounded-md border border-slate-300 bg-white font-bold text-vibe-indigo outline-none cursor-pointer">
+      <select x-model="selectedCategory" class="px-4 py-3 bg-white border border-b2b-border font-black text-b2b-teal outline-none cursor-pointer uppercase tracking-widest text-xs">
         <option value="all">Всички Категории</option>
         <option value="chemicals">Почистващи препарати</option>
         <option value="disinfectants">Дезинфектанти</option>
@@ -66,28 +67,27 @@
       </select>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-b2b-border bg-white">
       <template x-for="item in filteredItems" :key="item.id">
-        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition flex flex-col">
+        <div class="p-8 border-b md:border-b-0 md:border-r border-b2b-border hover:bg-b2b-light transition-colors flex flex-col group">
           
-          <div class="flex justify-between items-start mb-4">
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-400" x-text="item.categoryLabel"></span>
-            
-            <span x-show="item.inStock" class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-bold">На склад</span>
-            <span x-show="!item.inStock" class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded font-bold">По заявка (24ч)</span>
+          <div class="flex justify-between items-start mb-6">
+            <span class="text-[10px] font-black uppercase tracking-widest text-b2b-tealmid bg-b2b-light px-2 py-1 border border-b2b-border" x-text="item.categoryLabel"></span>
+            <span x-show="item.inStock" class="text-[10px] font-black uppercase tracking-widest text-b2b-green">На склад</span>
+            <span x-show="!item.inStock" class="text-[10px] font-black uppercase tracking-widest text-[#D48E00]">По заявка</span>
           </div>
           
-          <h3 class="text-xl font-bold text-brand-blue mb-2" x-text="item.name"></h3>
-          <p class="text-slate-500 text-sm mb-6 flex-1" x-text="item.desc"></p>
+          <h3 class="text-2xl font-black text-b2b-teal mb-3 uppercase" x-text="item.name"></h3>
+          <p class="text-b2b-tealmid text-sm mb-8 flex-1 font-medium" x-text="item.desc"></p>
           
-          <a :href="'index.html?product=' + encodeURIComponent(item.name) + '#contact'" class="block w-full text-center bg-white border-2 border-vibe-indigo text-vibe-indigo font-black py-3 rounded-xl hover:bg-vibe-indigo hover:text-white transition-all shadow-sm transform hover:-translate-y-1">
-  Поискай B2B Цена ⚡
-</a>
+          <a :href="'index.html?product=' + encodeURIComponent(item.name) + '#contact'" class="block w-full text-center border-2 border-b2b-green text-b2b-teal font-black py-3 uppercase tracking-widest text-xs hover:bg-b2b-green hover:border-b2b-green hover:text-white transition-colors">
+            Поискай Цена
+          </a>
         </div>
       </template>
 
-      <div x-show="filteredItems.length === 0" class="col-span-full text-center py-12">
-        <p class="text-slate-400 text-lg">Няма намерени продукти по вашия критерий.</p>
+      <div x-show="filteredItems.length === 0" class="col-span-full text-center py-20 bg-white">
+        <p class="text-b2b-tealmid text-lg font-bold uppercase tracking-widest">Няма намерени продукти.</p>
       </div>
     </div>
   </main>
