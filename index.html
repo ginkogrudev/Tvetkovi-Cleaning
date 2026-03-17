@@ -189,7 +189,7 @@
             <li class="flex gap-3"><span class="text-b2b-green">■</span> Базова санитария</li>
             <li class="flex gap-3"><span class="text-b2b-green">■</span> Доставка веднъж месечно</li>
           </ul>
-          <a href="#contact" class="block text-center border-2 border-b2b-teal text-b2b-teal font-black uppercase tracking-widest py-4 hover:bg-b2b-teal hover:text-white transition-colors">Оферта</a>
+          <a href="#contcontact" class="block text-center border-2 border-b2b-teal text-b2b-teal font-black uppercase tracking-widest py-4 hover:bg-b2b-teal hover:text-white transition-colors">Оферта</a>
         </div>
 
         <div class="p-10 flex flex-col bg-b2b-teal text-white border-b md:border-b-0 md:border-r border-b2b-tealdark relative">
@@ -220,86 +220,46 @@
   </section>
 
   <section id="contact" class="py-24 bg-white border-b border-b2b-border">
-    <div class="max-w-6xl mx-auto px-4" data-aos="zoom-in">
-      <div class="grid lg:grid-cols-5 border-4 border-b2b-tealdark bg-b2b-white">
+    <div class="max-w-5xl mx-auto px-4 text-center" data-aos="zoom-in">
+      <div class="inline-block bg-b2b-teal text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 mb-6">
+        VIP B2B Линия
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black text-b2b-teal mb-6 uppercase">
+        Спрете да попълвате форми. <br><span class="text-b2b-green">Просто ни звъннете.</span>
+      </h2>
+      <p class="text-b2b-tealmid text-lg md:text-xl font-medium max-w-2xl mx-auto mb-12">
+        Обслужваме хотели, ресторанти, казина и SPA центрове. Без чакане на имейли. Персонален търговски агент приема заявката ви на секундата.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
         
-        <div class="lg:col-span-2 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-b2b-tealdark bg-b2b-tealdark text-white flex flex-col justify-center">
-          <h3 class="text-3xl font-black mb-4 uppercase">Свържете се с нас.</h3>
-          <p class="text-b2b-light opacity-80 mb-10 font-medium">Отговаряме веднага. Без ботове, директно към търговския отдел.</p>
-          
-          <div class="space-y-4 font-black">
-            <a href="https://wa.me/359878765658" target="_blank" class="block bg-[#25D366] text-white p-4 uppercase tracking-widest text-sm hover:bg-white hover:text-[#25D366] transition-colors text-center border-2 border-[#25D366]">
-              WhatsApp Чат
-            </a>
-            <a href="viber://chat?number=%2B359878765658" target="_blank" class="block bg-[#7360F2] text-white p-4 uppercase tracking-widest text-sm hover:bg-white hover:text-[#7360F2] transition-colors text-center border-2 border-[#7360F2]">
-              Viber Чат
-            </a>
-            <div class="pt-6 space-y-4">
-              <a href="tel:+359878765658" class="flex items-center gap-4 hover:text-b2b-green transition-colors text-lg">
-                <span class="text-b2b-green">📞</span> 087 876 5658
-              </a>
-              <a href="mailto:office@tsvetkovitrading.bg" class="flex items-center gap-4 hover:text-b2b-green transition-colors text-lg">
-                <span class="text-b2b-green">📧</span> office@tsvetkovitrading.bg
-              </a>
-            </div>
-          </div>
-        </div>
+        <a href="tel:+359878765658" class="group flex flex-col items-center justify-center bg-b2b-light border-2 border-b2b-teal p-8 hover:bg-b2b-teal hover:text-white transition-all duration-300">
+          <span class="text-5xl mb-4 group-hover:scale-110 transition-transform">📞</span>
+          <span class="text-2xl font-black text-b2b-teal group-hover:text-white transition-colors">087 876 5658</span>
+          <span class="text-xs font-black uppercase tracking-widest mt-2 opacity-70">Директно Обаждане</span>
+        </a>
 
-        <div class="lg:col-span-3 p-8 md:p-12"
-             x-data="{ 
-               loading: false, 
-               success: false,
-               form: { company: '', phone: '', productOfInterest: '' },
-               init() {
-                 const urlParams = new URLSearchParams(window.location.search);
-                 if(urlParams.has('product')) {
-                   this.form.productOfInterest = 'Запитване за: ' + urlParams.get('product');
-                 }
-               },
-               submitForm() {
-                 if(this.form.company === '' || this.form.phone === '') return;
-                 this.loading = true;
-                 setTimeout(() => { this.loading = false; this.success = true; }, 1500);
-               }
-             }">
-          
-          <div x-show="!success">
-            <h2 class="text-3xl font-black text-b2b-teal mb-2 uppercase">Генерирай Оферта</h2>
-            <p class="text-b2b-tealmid mb-8 font-medium">Оставете телефон. Ще сметнем B2B отстъпките ви и ще се обадим.</p>
-            
-            <form @submit.prevent="submitForm" class="space-y-6">
-              
-              <div x-show="form.productOfInterest !== ''" class="bg-b2b-light p-4 border-l-4 border-b2b-green text-b2b-teal font-black flex items-center gap-3">
-                <span class="text-b2b-green">■</span>
-                <span x-text="form.productOfInterest"></span>
-              </div>
+        <a href="viber://chat?number=%2B359878765658" target="_blank" class="group flex flex-col items-center justify-center bg-[#7360F2]/10 border-2 border-[#7360F2] p-8 hover:bg-[#7360F2] hover:text-white transition-all duration-300">
+          <span class="text-5xl mb-4 group-hover:scale-110 transition-transform">💜</span>
+          <span class="text-2xl font-black text-[#7360F2] group-hover:text-white transition-colors">Viber Чат</span>
+          <span class="text-xs font-black uppercase tracking-widest mt-2 opacity-70">Пишете ни сега</span>
+        </a>
 
-              <div>
-                <label class="block text-xs font-black text-b2b-teal mb-2 uppercase tracking-widest">Фирма / Обект *</label>
-                <input x-model="form.company" type="text" required class="w-full p-4 bg-white border border-b2b-border focus:border-b2b-teal outline-none transition-colors font-bold text-b2b-teal rounded-none" placeholder="Хотел Тунджа">
-              </div>
-              
-              <div>
-                <label class="block text-xs font-black text-b2b-teal mb-2 uppercase tracking-widest">Телефон *</label>
-                <input x-model="form.phone" type="tel" required class="w-full p-4 bg-white border border-b2b-border focus:border-b2b-teal outline-none transition-colors font-bold text-b2b-teal rounded-none" placeholder="087 876 5658">
-              </div>
+        <a href="https://wa.me/359878765658" target="_blank" class="group flex flex-col items-center justify-center bg-[#25D366]/10 border-2 border-[#25D366] p-8 hover:bg-[#25D366] hover:text-white transition-all duration-300">
+          <span class="text-5xl mb-4 group-hover:scale-110 transition-transform">💬</span>
+          <span class="text-2xl font-black text-[#25D366] group-hover:text-white transition-colors">WhatsApp</span>
+          <span class="text-xs font-black uppercase tracking-widest mt-2 opacity-70">24/7 Линия</span>
+        </a>
 
-              <button type="submit" :disabled="loading" class="w-full bg-b2b-teal text-white font-black py-5 uppercase tracking-widest hover:bg-b2b-tealdark transition-colors flex justify-center items-center gap-3 mt-4" :class="loading ? 'opacity-70 cursor-wait' : ''">
-                <span x-show="!loading">Изпрати Запитване</span>
-                <span x-show="loading" class="animate-pulse">Обработка...</span>
-              </button>
-            </form>
-          </div>
+      </div>
 
-          <div x-show="success" class="text-center py-10 h-full flex flex-col justify-center" x-cloak>
-            <div class="text-6xl mb-6 text-b2b-green">■</div>
-            <h3 class="text-3xl font-black text-b2b-teal mb-3 uppercase">Успешно изпратено.</h3>
-            <p class="text-b2b-tealmid font-bold text-lg">
-              Очаквайте обаждане от търговския ни отдел до 2 часа.
-            </p>
-          </div>
-
-        </div>
+      <div class="mt-12 flex items-center justify-center gap-6">
+        <a href="#" class="text-b2b-tealmid hover:text-b2b-teal font-black uppercase tracking-widest text-sm flex items-center gap-2">
+          <span class="text-xl">📘</span> Facebook
+        </a>
+        <a href="#" class="text-b2b-tealmid hover:text-b2b-teal font-black uppercase tracking-widest text-sm flex items-center gap-2">
+          <span class="text-xl">📸</span> Instagram
+        </a>
       </div>
     </div>
   </section>
